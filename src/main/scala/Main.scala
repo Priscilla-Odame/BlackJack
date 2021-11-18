@@ -1,4 +1,5 @@
 object Main extends App {
-  val newCard:Suite = new HeartSuite()
-  println(newCard.cards)
+  val newCard = new Deck()
+//  println(newCard.deck)
+  println(newCard.getCard)
 }

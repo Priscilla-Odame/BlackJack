@@ -21,10 +21,10 @@ abstract class Suite(protected val suiteName: String) {
 
 }
 
-class SpadeSuite extends Suite("Spade")
+object SpadeSuite extends Suite("Spade")
 
-class HeartSuite extends Suite("Heart")
+object HeartSuite extends Suite("Heart")
 
-class DiamondSuite extends Suite("Diamond")
+object DiamondSuite extends Suite("Diamond")
 
-class ClubSuite extends Suite("Club")
+object ClubSuite extends Suite("Club")
