@@ -1,3 +1,4 @@
 object Main extends App {
-  print("Hello World")
+  val newCard:Card = new Club("2",2)
+  println(newCard)
 }
