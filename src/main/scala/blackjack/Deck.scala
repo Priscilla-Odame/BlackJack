@@ -1,3 +1,5 @@
+package blackjack
+
 import scala.collection.mutable.ListBuffer
 import scala.util.Random.shuffle
 

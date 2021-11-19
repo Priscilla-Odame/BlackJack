@@ -1,3 +1,5 @@
+package blackjack
+
 import scala.collection.mutable.ListBuffer
 
 abstract class Suite(protected val suiteName: String) {

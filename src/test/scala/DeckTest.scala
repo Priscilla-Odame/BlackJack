@@ -1,3 +1,4 @@
+import blackjack.{Card, Deck}
 import org.scalatest.FunSuite;
 
 class DeckTest extends FunSuite {
