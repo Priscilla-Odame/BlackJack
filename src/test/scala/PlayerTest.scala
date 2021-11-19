@@ -1,10 +1,11 @@
 import blackjack.{Card, Player}
 import org.scalatest.FunSuite
+import stubs.DefaultStrategyStub
 
 class PlayerTest extends FunSuite {
 
   test("testPlayTurn") {
-    val prish = new Player("Priscilla Odame")
+    val prish = new Player("Priscilla Odame", new DefaultStrategyStub())
     prish.collect(new Card("Queen", 10, "Spade"))
     prish.collect(new Card("Queen", 10, "Heart"))
     assert(prish.playTurn == "Stick")

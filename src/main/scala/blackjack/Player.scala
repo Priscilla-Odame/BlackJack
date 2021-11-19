@@ -8,7 +8,7 @@ class Player(val name:String, private val strategy: Strategy = new DefaultStrate
   // a player shouldn't have the same card twice
   def collect(card: Card): Unit = if(!cards.contains(card)) cards.append(card)
 
-  def playTurn: String = ???
+  def playTurn: String = strategy.useStrategy(getTotalCardValue)
 
   def getTotalCardValue = cards.map(_.value).reduce(_ + _)
 }
