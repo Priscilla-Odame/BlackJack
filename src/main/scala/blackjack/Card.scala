@@ -1,3 +1,3 @@
 package blackjack
 
-case class Card(val name: String, val value: Int, val suite: String)
+case class Card(label: String, value: Int, suite: String)

@@ -1,6 +1,25 @@
 package blackjack
 
-class Game {
+import scala.collection.mutable.ListBuffer
 
-//  val players = List(new Player("Ebuka"))
+class Game private (var players: ListBuffer[Player]) {
+  val cardDeck = new Deck()
+
+  def start:Unit = ???
+
+  def hasEnded:Boolean = ???
+
+  def announceWinner:Unit = ???
+}
+
+
+object Game {
+  def setupGame(args: List[String]):Game = {
+    // get players
+    // create deck
+    // shuffle deck
+    // create game
+    // return game
+    ???
+  }
 }
