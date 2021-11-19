@@ -2,8 +2,8 @@ package blackjack
 
 import scala.collection.mutable.ListBuffer
 
-class Game private (var players: ListBuffer[Player]) {
-  val cardDeck = new Deck()
+
+class Game private (var players: ListBuffer[Player], val cardDeck: Deck) {
 
   def start:Unit = ???
 
@@ -12,14 +12,16 @@ class Game private (var players: ListBuffer[Player]) {
   def announceWinner:Unit = ???
 }
 
-
+// Facade Design Pattern
 object Game {
-  def setupGame(args: List[String]):Game = {
-    // get players
+  def setupGame(args: List[String] = null):Game = {
+    // get or create players
+    val players = List(new Player("Frank"), new Player("Prish"), new Player("Siobhan"))
     // create deck
-    // shuffle deck
+    val cardDeck = new Deck();
     // create game
+    val game = new Game(ListBuffer().concat(players), cardDeck)
     // return game
-    ???
+    game
   }
 }
