@@ -5,9 +5,25 @@ import scala.collection.mutable.ListBuffer
 
 class Game private (var players: ListBuffer[Player], val cardDeck: Deck) {
 
-  def start:Unit = ???
+  private var winner: Player = null
+  private var roundNumber: Int = 1
 
-  def hasEnded:Boolean = ???
+  def start:Unit = {
+    cardDeck.shuffleDeck
+    players.foreach(_.collect(cardDeck.popCard(2)))
+    while(!hasEnded) {
+      players.foreach(player => {
+        player.playTurn()
+      })
+    }
+  }
+
+  def hasEnded:Boolean = {
+    // true: if all players stick in a round
+    // true: if a player hits 21
+    // true: if all players except one "Go Bust"
+    ???
+  }
 
   def announceWinner:Unit = ???
 }
